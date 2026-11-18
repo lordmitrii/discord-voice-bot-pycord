@@ -4,13 +4,15 @@
     "local>Pycord-Development/renovate-config",
     ":semanticPrefixFixDepsChoreOthers",
     ":dependencyDashboard",
-    ":enablePreCommit"
+    ":enablePreCommit",
+    "group:monorepos",
+    "group:allNonMajor"
   ],
   "assigneesFromCodeOwners": true,
-  "pip_requirements": {
-    "managerFilePatterns": ["requirements/*.txt"]
-  },
   "github-actions": {
     "pinDigests": true
+  },
+  "lockFileMaintenance": {
+    "enabled": true
   }
 }
