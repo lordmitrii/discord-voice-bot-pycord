@@ -79,8 +79,8 @@ These changes are available on the `master` branch, but have not yet been releas
   thread. ([#3309](https://github.com/Pycord-Development/pycord/pull/3309))
 - Fixed a bug where audio reception would drop after prolonged silence in a voice channel.
   ([#3436](https://github.com/Pycord-Development/pycord/pull/3436))
-- Fix `ctx.command.qualified_name` returning only the parent `SlashCommandGroup` name
-  instead of the full subcommand path when accessed inside `cog_check`.
+- Fix `ctx.command.qualified_name` returning only the parent `SlashCommandGroup` name instead of the
+  full subcommand path when accessed inside `cog_check`.
   ([#3363](https://github.com/Pycord-Development/pycord/pull/3363))
 
 ### Deprecated
