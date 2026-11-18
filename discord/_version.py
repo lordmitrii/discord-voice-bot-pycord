@@ -37,7 +37,7 @@ __all__ = ("__version__", "VersionInfo", "version_info")
 from typing import Literal, NamedTuple
 
 try:
-    __version__ = version("py-cord")
+    __version__ = version("discord-voice-bot-pycord")
 except PackageNotFoundError:
     # Package is not installed
     try:
