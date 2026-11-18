@@ -3435,7 +3435,7 @@ class HTTPClient:
         )
 
     def get_channel_member_permissions(
-        self, channel_id: int, user_id: int
+        self, channel_id: int, user_id: int, *, implicit: bool
     ) -> Response[guild.GetPermissionsResponseData]:
         return self.request(
             Route(
@@ -3443,11 +3443,12 @@ class HTTPClient:
                 "/channels/{channel_id}/permissions/member/{user_id}",
                 channel_id=channel_id,
                 user_id=user_id,
-            )
+            ),
+            params={"implicit": int(implicit)},
         )
 
     def get_channel_role_permissions(
-        self, channel_id: int, role_id: int
+        self, channel_id: int, role_id: int, *, implicit: bool
     ) -> Response[guild.GetPermissionsResponseData]:
         return self.request(
             Route(
@@ -3455,5 +3456,6 @@ class HTTPClient:
                 "/channels/{channel_id}/permissions/role/{role_id}",
                 channel_id=channel_id,
                 role_id=role_id,
-            )
+            ),
+            params={"implicit": int(implicit)},
         )
