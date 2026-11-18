@@ -144,7 +144,7 @@ jobs:
       - name: "Run pylint"
         run: |
           pylint discord/ \
-            --output-format=github,json:pylint.json
+            --output-format=github
   flake8:
     needs: [ changes ]
     if: ${{ needs.changes.outputs.lib == 'true' }}
